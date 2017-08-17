@@ -130,6 +130,8 @@ const FormsyText = createClass({
       validationErrors, // eslint-disable-line no-unused-vars
       value, // eslint-disable-line no-unused-vars
       validationColor,
+      floatingLabelFixed,
+      floatingLabelText,
       ...rest } = this.props;
 
     const { isRequired, isPristine, isValid, isFormSubmitted } = this;
@@ -138,6 +140,8 @@ const FormsyText = createClass({
 
     return (
       <TextField
+        floatingLabelText={floatingLabelText}
+        floatingLabelFixed={floatingLabelFixed}
         disabled={this.isFormDisabled()}
         {...rest}
         errorText={errorText}
